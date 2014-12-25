@@ -1,0 +1,4 @@
+Real-time-video-content-based-ad-generator
+==========================================
+
+Generates ads in real time based on the content of the video. The audio form a video is downloaded, split into smaller parts, and then each part is send to GoogleSpeechToText API to get the corresponding text for that part. The text is then sent to Alchemy API to get the semantic content , i.e. keywords and entities. The word 'ad' is then added to these keywords and a search is made on ask.com . The resulting images are scraped and placed in the webpage beside the video (Youtube API). Thus the ads on the side of the video change in real time as the content of the video changes. If the person is talking about cars, an ad about cars shows up and when he talks about bikes, an ad about bikes shows up. To download the audio only, and split the audio, we use ffmpeg and youtube-dl .We run the shell commands from php itself.
